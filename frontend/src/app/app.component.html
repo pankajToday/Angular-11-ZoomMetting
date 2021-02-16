@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="card">
+    <article class="card-group-item">
+      <header class="card-header">
+        <h6 class="title text-md-center">Angular-11 : Zoom Meeting </h6>
+      </header>
+      <div class="filter-content">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active"  role="tab" routerLink="/">Home</a>
+                <a class="nav-link active"  role="tab" routerLink="/create-meeting">Create Meeting</a>
+                <a class="nav-link active"  role="tab" routerLink="/all-meeting-list">All Meeting List</a>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- card-body.// -->
+      </div>
+    </article> <!-- card-group-item.// -->
+  </div> <!-- card.// -->
+</div>
+
+
+

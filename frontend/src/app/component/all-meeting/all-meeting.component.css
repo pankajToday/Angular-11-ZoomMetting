@@ -1,0 +1,8 @@
+.custom-switch .custom-control-label::after{width: 1rem !important; height: 1rem !important;}
+.custom-switch .custom-control-label::before{width: 2.4rem !important; height: 1.3rem !important;}
+
+.img{ height: 90px;}
+.img-round { border-radius: 100px; border: 1px solid gray;}
+.mat-form-field {
+    margin-right: 12px;
+}
