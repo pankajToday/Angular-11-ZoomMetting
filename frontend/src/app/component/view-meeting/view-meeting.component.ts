@@ -16,7 +16,6 @@ export class ViewMeetingComponent implements OnInit {
     meeting = [];
     loadingImg=false;
     id='';
-    destroy$: Subject<boolean> = new Subject<boolean>();
 
 
     ngOnInit(): void {
@@ -31,14 +30,23 @@ export class ViewMeetingComponent implements OnInit {
         {
             this.fetchMeetingDetails()
         }
+        else
+        {
+            Swal.fire('Error!','Unable to find detail','error')
+        }
     }
 
    fetchMeetingDetails(){
+        //Swal.fire('d');
        this.loadingImg =true;
-       this.restAPIService.fetchMeetingDetails(this.id).subscribe((data: any[])=>{
-            console.log(data);
+       this.restAPIService.fetchMeetingDetails(this.id).subscribe((data:meetingsInterFace)=>{
+           console.log(data);
            this.loadingImg =false;
            this.meeting = data;
        })
    }
+}
+export class meetingsInterFace {
+
+
 }

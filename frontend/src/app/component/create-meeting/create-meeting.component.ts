@@ -29,7 +29,7 @@ export class CreateMeetingComponent implements OnInit {
       this.meetingCreateForm = this.formBuilder.group({
           topic: ['', [Validators.required,  Validators.pattern('^[a-zA-Z0-9 .]{5,40}$')]],
           meetingPassword: ['12345' , [Validators.required,  Validators.pattern('^[a-zA-Z0-9 .!@#$%_]{5,10}$')]],
-          startTime: [new Date('dd-MM-yyyy hh:ii')],
+          startTime: [],
           duration: ['25'],
           meeting_type:[1]
       });

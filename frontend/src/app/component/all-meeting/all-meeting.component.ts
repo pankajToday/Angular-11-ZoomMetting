@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RestApiService} from '../../service/rest-api.service';
 import {Subject} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-all-meeting',
@@ -16,7 +16,7 @@ export class AllMeetingComponent implements OnInit {
     index=1;
     loadingImg=false;
     id='';
-    destroy$: Subject<boolean> = new Subject<boolean>();
+
   ngOnInit(): void {
 
       this.fetchAllMeetings();
@@ -25,9 +25,8 @@ export class AllMeetingComponent implements OnInit {
   fetchAllMeetings()
   {
      this.loadingImg =true;
-      this.restAPIService.fetchAllMeetings().subscribe((data: [])=>{
-         // console.log(data.meetings);
-          this.meetings = data;
+      this.restAPIService.fetchAllMeetings().subscribe((data: meetingsInterFace)=>{
+          this.meetings = data.meetings;
           this.loadingImg = false;
       })
   }
@@ -44,7 +43,7 @@ export class AllMeetingComponent implements OnInit {
           if (result.value) {
 
               this.loadingImg =true;
-              this.restAPIService.deleteMeeting(id).subscribe((data)=>{
+              this.restAPIService.deleteMeeting(id).subscribe((data:any)=>{
                   this.loadingImg = false;
                   this.router.navigate(['/']);
                   Swal.fire(
@@ -58,10 +57,9 @@ export class AllMeetingComponent implements OnInit {
       })
   }
 
-    ngOnDestroy() {
-        this.destroy$.next(true);
-        // Unsubscribe from the subject
-        this.destroy$.unsubscribe();
-    }
 
 }
+export class meetingsInterFace {
+    meetings: any[];
+}
+

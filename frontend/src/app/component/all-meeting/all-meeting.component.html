@@ -23,7 +23,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr *ngFor="let meeting of meetings.meetings;let i= index;">
+                            <tr *ngFor="let meeting of meetings;let i= index;">
                                 <th>{{i+1}} </th>
                                 <th> {{ meeting.topic  }}  </th>
                                 <th>{{ meeting.start_time |date }}</th>
