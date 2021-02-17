@@ -6,7 +6,16 @@ export const environment = {
     APIURL: 'http://127.0.0.1:8000',
     USER_ID : '',
     CLIENT_TOKEN :'',
-     production: false,
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyBanKYlEAOIShPqXFow7GNRQNn4ZteHP7M",
+        authDomain: "new-project-59236.firebaseapp.com",
+        projectId: "new-project-59236",
+        storageBucket: "new-project-59236.appspot.com",
+        messagingSenderId: "160578159687",
+        appId: "1:160578159687:web:8017d71051747d1834dd62",
+        measurementId: "G-9J3TPXWFJJ"
+       }
 };
 
 /*
