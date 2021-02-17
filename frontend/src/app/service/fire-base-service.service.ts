@@ -17,8 +17,8 @@ export class FireBaseServiceService {
     requestPermission() {
         this.angularFireMessaging.requestToken.subscribe(
             (token) => {
-                localStorage.setItem('my-app-fire-token', token.length?token:"");
-                //console.log(token);
+                localStorage.setItem('my-app-fire-token', token?token:"");
+                console.log(token);
             },
             (err) => {
                 console.error('Unable to get permission to notify.', err);

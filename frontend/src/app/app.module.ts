@@ -21,13 +21,13 @@ import { EditMeetingComponent } from './component/edit-meeting/edit-meeting.comp
 
 
 //fireBase
-/*import { AngularFireMessagingModule } from "@angular/fire/messaging";
+import { AngularFireMessagingModule } from "@angular/fire/messaging";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFireModule } from "@angular/fire";
 import { FireBaseServiceService } from "./service/fire-base-service.service";
 import { environment } from "../environments/environment";
-import { AsyncPipe } from "../../node_modules/@angular/common";*/
+import { AsyncPipe } from "../../node_modules/@angular/common";
 
 @NgModule({
   declarations: [
@@ -46,14 +46,14 @@ import { AsyncPipe } from "../../node_modules/@angular/common";*/
     FormsModule,
     ReactiveFormsModule,
 
-      /*AngularFireDatabaseModule,
+      AngularFireDatabaseModule,
       AngularFireAuthModule,
       AngularFireMessagingModule,
-      AngularFireModule.initializeApp(environment.firebase),*/
+      AngularFireModule.initializeApp(environment.firebase),
 
   ],
   providers: [
-      /*FireBaseServiceService,AsyncPipe*/
+      FireBaseServiceService,AsyncPipe
   ],
   bootstrap: [AppComponent]
 })
