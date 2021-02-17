@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RestApiService} from '../../service/rest-api.service';
 import {Subject} from 'rxjs';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -18,20 +18,23 @@ export class AllMeetingComponent implements OnInit {
     id='';
 
   ngOnInit(): void {
-
       this.fetchAllMeetings();
   }
 
   fetchAllMeetings()
   {
-     this.loadingImg =true;
+
+      this.loadingImg =true;
       this.restAPIService.fetchAllMeetings().subscribe((data: meetingsInterFace)=>{
           this.meetings = data.meetings;
           this.loadingImg = false;
       })
   }
 
+
+
   deleteMeeting(id){
+
       Swal.fire({
           title: 'Are you sure?',
           text: 'This process is irreversible.',
@@ -45,13 +48,12 @@ export class AllMeetingComponent implements OnInit {
               this.loadingImg =true;
               this.restAPIService.deleteMeeting(id).subscribe((data:any)=>{
                   this.loadingImg = false;
-                  this.router.navigate(['/']);
+                  this.router.navigate(['/all-meeting-list']);
                   Swal.fire(
                       'Removed!',
                       'Meeting removed successfully.',
                       'success'
                   );
-
               })
           }
       })

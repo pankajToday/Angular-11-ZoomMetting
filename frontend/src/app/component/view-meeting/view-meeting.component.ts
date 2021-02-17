@@ -37,10 +37,9 @@ export class ViewMeetingComponent implements OnInit {
     }
 
    fetchMeetingDetails(){
-        //Swal.fire('d');
        this.loadingImg =true;
        this.restAPIService.fetchMeetingDetails(this.id).subscribe((data:meetingsInterFace)=>{
-           console.log(data);
+           //console.log(data);
            this.loadingImg =false;
            this.meeting = data;
        })

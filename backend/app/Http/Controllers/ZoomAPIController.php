@@ -12,7 +12,7 @@ class ZoomAPIController extends Controller
 
     function  __construct()
     {
-        $this->userId ="";
+        $this->userId ="LayQEPmhSyyVn_QE0FTgmw";
         $this->userToken ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjJESFdWVVdNVFdLeWxwaHhfRHNXR3ciLCJleHAiOjE3OTg2NTU0MDAsImlhdCI6MTYxMjk0ODUzNX0.TPKy6U2bmat9crdkLAfnSihH-Lui7oF7kSSvEsAuDDs";
     }
 

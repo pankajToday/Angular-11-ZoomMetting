@@ -6,7 +6,7 @@ export const environment = {
     APIURL: 'http://127.0.0.1:8000',
     USER_ID : '',
     CLIENT_TOKEN :'',
-  production: false
+     production: false,
 };
 
 /*
