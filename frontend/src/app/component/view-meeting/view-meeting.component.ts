@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 export class ViewMeetingComponent implements OnInit {
 
   constructor(private  restAPIService:RestApiService,private activatedRoute: ActivatedRoute) { }
-    meeting = [];
+    meeting;
     loadingImg=false;
     id='';
 
@@ -38,14 +38,11 @@ export class ViewMeetingComponent implements OnInit {
 
    fetchMeetingDetails(){
        this.loadingImg =true;
-       this.restAPIService.fetchMeetingDetails(this.id).subscribe((data:meetingsInterFace)=>{
+       // noinspection JSAnnotator
+       this.restAPIService.fetchMeetingDetails(this.id).subscribe((data:any[])=>{
            //console.log(data);
            this.loadingImg =false;
            this.meeting = data;
        })
    }
-}
-export class meetingsInterFace {
-
-
 }

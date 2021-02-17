@@ -45,10 +45,10 @@ export class EditMeetingComponent implements OnInit {
       this.meetingUpdateForm = this.formBuilder.group({
           topic: ['', [Validators.required,  Validators.pattern('^[a-zA-Z0-9 .]{5,40}$')]],
           meetingPassword: ['' , [Validators.required,  Validators.pattern('^[a-zA-Z0-9 .!@#$%_]{5,10}$')]],
-          startTime: [],
-          duration: [],
-          id:[],
-          meeting_type:[1]
+          startTime: [''],
+          duration: [''],
+          id:[''],
+          meeting_type:[2]
       });
   }
 

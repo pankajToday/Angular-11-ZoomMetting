@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FireBaseServiceService } from "./service/fire-base-service.service";
-
-
+/*import { FireBaseServiceService } from "./service/fire-base-service.service";*/
 
 
 @Component({
@@ -13,9 +11,9 @@ import { FireBaseServiceService } from "./service/fire-base-service.service";
 export class AppComponent {
   title = 'Zoom-Meeting';
     message;
-    constructor(private messagingService: FireBaseServiceService) { }
+    /*constructor(private messagingService: FireBaseServiceService) { }
 
-    ngOnInit() {this.messagingService.requestPermission()
+    ngOnInit() {this.messagingService.requestPermission();
         this.messagingService.receiveMessage()
-        this.message = this.messagingService.currentMessage}
+        this.message = this.messagingService.currentMessage}*/
 }
